@@ -1,4 +1,7 @@
 import './bootstrap';
 
-console.log('Bienvenue sur Foodbook !');
+import Alpine from 'alpinejs';
 
+window.Alpine = Alpine;
+
+Alpine.start();
