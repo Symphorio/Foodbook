@@ -12,6 +12,9 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <div class="mt-4">
+                <a href="{{ route('profile.edit') }}" class="text-blue-500 hover:underline">Mon Profil</a>
+            </div>
         </div>
     </div>
 </x-app-layout>
