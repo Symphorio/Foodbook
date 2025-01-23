@@ -31,7 +31,7 @@ class RegisteredUserController extends Controller
 {
     // Liste des emails des administrateurs
     $adminEmails = [
-        'alleluia@gmail.com',
+        'christopher@gmail.com',
         'admin2@gmail.com',
     ];
 
