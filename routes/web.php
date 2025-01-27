@@ -38,7 +38,10 @@ Route::middleware('auth')->group(function () {
     Route::middleware(['role:user'])->get('/user/dashboard', [UserDashboardController::class, 'index'])->name('user.dashboard');
 
     // Dashboard administrateur
-    Route::middleware(['role:admin'])->get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
+    ->middleware(['auth', \App\Http\Middleware\AdminRoleMiddleware::class])  // Utilisation directe de la classe
+    ->name('admin.dashboard');
+
 });
 
 // Routes pour les visiteurs
