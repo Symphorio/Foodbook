@@ -47,4 +47,8 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.store');
 });
 
+Route::get('/restaurants', function () {
+    return view('restaurants');
+})->name('restaurants');
+
 require __DIR__ . '/auth.php';
