@@ -12,36 +12,33 @@ use Illuminate\View\View;
 class ProfileController extends Controller
 {
     /**
-     * Affiche la page de profil.
-     *
-     * @return \Illuminate\View\View
+     * Display the user's profile form.
      */
     public function edit(Request $request): View
     {
         return view('profile.edit', [
-            'user' => Auth::user(),
+            'user' => $request->user(),
         ]);
     }
 
     /**
-     * Met à jour le profil de l'utilisateur.
-     *
-     * @param  \App\Http\Requests\ProfileUpdateRequest  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Update the user's profile information.
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $user = Auth::user();
-        $user->update($request->validated());
+        $request->user()->fill($request->validated());
+
+        if ($request->user()->isDirty('email')) {
+            $request->user()->email_verified_at = null;
+        }
+
+        $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
     /**
-     * Supprime le compte de l'utilisateur.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Delete the user's account.
      */
     public function destroy(Request $request): RedirectResponse
     {

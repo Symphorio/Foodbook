@@ -9,10 +9,6 @@ class AdminRoleMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role !== 'admin') {
-            abort(403, 'Unauthorized action.');
-        }
-
-        return $next($request);
+        abort(403, 'Unauthorized action.');
     }
 }
