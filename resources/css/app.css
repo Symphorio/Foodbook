@@ -10,3 +10,17 @@
     position: relative;
     left: 50px;
 }
+
+#bg_1 {
+    width: 100%;
+    height: 600px;
+    background-image: url('/Applications/MAMP/htdocs/Foodbook/public/images/backgroundacceuil.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#ti_de{
+    position: relative;
+    top: 250px;
+}

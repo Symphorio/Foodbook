@@ -20,6 +20,7 @@
             <a href="/restaurants" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Restaurants</a>
             <a href="/reservations" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Réservations</a>
             <a href="/commandes" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Commandes</a>
+            
             <a href="/contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Contact</a>
         </div>
 
