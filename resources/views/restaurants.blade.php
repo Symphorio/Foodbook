@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurants - Foodbook</title>
+    <link rel="stylesheet" href="{{ asset('resources/css/restaurant.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased bg-gray-100 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
@@ -113,6 +114,77 @@
             <!-- Ajoutez plus de types de restaurants ici -->
         </div>
     </div>
+</div>
+<!-- Section des restaurants  -->
+<div>
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white text-center my-8">Restaurants</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant1.jpg') }}" alt="Restaurant 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 1</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/1" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant2.jpg') }}" alt="Restaurant 2" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 2</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/2" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="{{ asset('images/restaurant3.jpg') }}" alt="Restaurant 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Restaurant 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="/restaurant/3" class="block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Voir plus</a>
+           </div>
+</div>
+
+                
 </div>
 
 </body>
