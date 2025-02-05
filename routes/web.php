@@ -49,6 +49,11 @@ Route::get('/restaurants', function () {
     return view('restaurants');
 })->name('restaurants');
 
+// dashboard admin
+
+
+
+
 require __DIR__ . '/auth.php';
 
 require __DIR__ . '/admin-auth.php';
