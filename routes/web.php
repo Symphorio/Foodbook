@@ -37,11 +37,6 @@ Route::middleware('auth')->group(function () {
     // Dashboard utilisateur
     Route::middleware(['role:user'])->get('/user/dashboard', [UserDashboardController::class, 'index'])->name('user.dashboard');
 
-    // Dashboard administrateur
-    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
-    ->middleware(['auth', \App\Http\Middleware\AdminRoleMiddleware::class])  // Utilisation directe de la classe
-    ->name('admin.dashboard');
-
 });
 
 // Routes pour les visiteurs
@@ -55,3 +50,5 @@ Route::get('/restaurants', function () {
 })->name('restaurants');
 
 require __DIR__ . '/auth.php';
+
+require __DIR__ . '/admin-auth.php';
