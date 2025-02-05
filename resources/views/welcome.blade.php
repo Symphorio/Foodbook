@@ -42,19 +42,19 @@
                     <button @click="open = !open" class="flex items-center text-gray-600 dark:text-gray-300">
                         <img src="{{ asset('images/profile.png') }}" alt="Profil" class="w-8 h-8 rounded-full">
                     </button>
-
-                                    <!-- Menu déroulant -->
-                <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md w-48">
-                    <a href="/profile" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mon Profil</a>
-                    <a href="/reservations" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mes Réservations</a>
-                    <a href="/settings" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Paramètres</a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="w-full text-left px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                            Déconnexion
-                        </button>
-                    </form>
-                </div>
+    
+                    <!-- Menu déroulant -->
+                    <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md w-48">
+                        <a href="/profile" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mon Profil</a>
+                        <a href="/reservations" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mes Réservations</a>
+                        <a href="/settings" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Paramètres</a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="w-full text-left px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Déconnexion
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,7 +75,11 @@
 </div>
 
 <!-- Section des restaurants -->
-
+<div id="titre_et_description_2">
+    <h1 id="ti_2" class="text-5xl font-bold">Foodbook</h1>
+    <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <p>Vivamus lacinia odio vitae vestibulum vestibulum consectetur adipiscing.</p>
+</div>
 
 </body>
 </html>
