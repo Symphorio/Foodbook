@@ -10,10 +10,11 @@ class AdminAuth
 {
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check() || Auth::user()->role !== 'admin') {
-            return redirect()->route('admin.login'); // Vérifie que ça redirige bien vers l'admin
+        // Vérifie si l'utilisateur est connecté et est admin
+        if (!Auth::guard('admin')->check()) {
+            return redirect()->route('admin.login')->with('error', 'Accès refusé.');
         }
+
         return $next($request);
     }
 }
-
