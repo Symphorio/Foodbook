@@ -22,14 +22,20 @@ class LoginController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(AdminLoginRequest $request): RedirectResponse
-    {
-        $request->authenticate();
+    public function store(Request $request)
+{
+    $credentials = $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ]);
 
-        $request->session()->regenerate();
-
-        return redirect()->intended(route('admin.dashboard', absolute: false));
+    if (Auth::guard('admin')->attempt($credentials)) {
+        return redirect()->route('admin.dashboard'); // FORCER la redirection admin
     }
+
+    return back()->withErrors(['email' => 'Identifiants incorrects.']);
+}
+
 
     /**
      * Destroy an authenticated session.
@@ -44,4 +50,10 @@ class LoginController extends Controller
 
         return redirect('/admin/login');
     }
+
+    protected function redirectTo()
+{
+    return route('admin.dashboard'); // Redirection forcée
+}
+
 }

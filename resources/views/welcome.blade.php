@@ -10,7 +10,7 @@
 <body>
 
 <!-- Barre de navigation avec arrière-plan -->
-<div id="bg_1" >
+<div id="bg_1">
     <nav>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
             <!-- Logo -->
@@ -61,16 +61,27 @@
     </nav>
 
     <!-- Nom de l'application et description -->
-    <div id="ti_de" >
+    <div id="ti_de">
         <h1 class="text-5xl font-bold">Foodbook</h1>
         <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
         <p>Vivamus lacinia odio vitae vestibulum vestibulum.</p>
         <p>Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-         <!-- Boutons Login et Register -->
-         <div class="mt-6">
-            <a href="{{ route('login') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">Login</a>
+        
+        <!-- Boutons Login et Register -->
+        <div class="mt-6">
+            <button onclick="showLoginModal()" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">Login</button>
             <a href="{{ route('register') }}" class="ml-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-700">Register</a>
         </div>
+    </div>
+</div>
+
+<!-- Modal pour choisir le type de connexion -->
+<div id="loginModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-lg font-bold mb-4">Se connecter en tant que :</h2>
+        <button onclick="redirectToLogin('user')" class="block w-full text-left px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 mb-2">Utilisateur</button>
+        <button onclick="redirectToLogin('admin')" class="block w-full text-left px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700">Admin</button>
+        <button onclick="closeLoginModal()" class="block mt-4 w-full text-center text-gray-600 hover:underline">Annuler</button>
     </div>
 </div>
 
@@ -80,6 +91,24 @@
     <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     <p>Vivamus lacinia odio vitae vestibulum vestibulum consectetur adipiscing.</p>
 </div>
+
+<script>
+    function showLoginModal() {
+        document.getElementById('loginModal').classList.remove('hidden');
+    }
+
+    function closeLoginModal() {
+        document.getElementById('loginModal').classList.add('hidden');
+    }
+
+    function redirectToLogin(type) {
+    if (type === 'user') {
+        window.location.href = "{{ route('login') }}";
+    } else if (type === 'admin') {
+        window.location.href = "{{ route('admin.login') }}";  // Cette ligne doit rediriger vers la page admin
+    }
+}
+</script>
 
 </body>
 </html>
